@@ -20,6 +20,7 @@
 --secondary-ac-color: #ffffff;
 --button-color: #F5F4FA;
 --text-link-footer: hexa{#ffffff99};
+
 }
 
 body {
@@ -29,13 +30,17 @@ body {
     font-family: roboto, sans-serif;
     letter-spacing: 0.03em;
 }
-/* Шапка */
+
 .container {
     border: 2px dashed tomato;
 
     width: 1200px;
     padding: 0 15px;
 }
+h1, h2, h3, p {
+    margin: 0;
+}
+/* Шапка */
 .navcont {
     display: flex;
     min-height: 80px;
@@ -134,9 +139,16 @@ body {
 }
 
 /* Основний контент */
+.section {
+    padding: 94px 0px;
+}
     /* Герой */
 .hero {
     background-color: var(--secondary-background-color);
+    text-align: center;
+}
+.section-hero{
+   padding: 200px;
 }
 .hero.text{
     color: var(--secondary-ac-color);
@@ -145,10 +157,14 @@ body {
     font-size: 44px;
     line-height: 1.37;
     text-transform: uppercase;
-    text-align: center;
     letter-spacing: 0.06em;
 }
 .hero .button {
+    border: var(--accsent-color);
+    padding: 10px 32px;
+    border-radius: 4px;
+    margin-top: 30px;
+
     background-color: var(--accsent-color);
     color: var(--secondary-ac-color);
 
@@ -177,11 +193,23 @@ body {
     cursor:pointer;
 }
     /* Наповнення */
-.cover-up {
-    visibility: hidden;
-}
+.visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+
 .list{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .team {
     background-color: var(--background-basis);
@@ -213,6 +241,8 @@ body {
     line-height: 1.9;
 }
 .text.name-specialty{
+    margin-top: 10px;
+
     font-size: 14px;
     line-height: 1.7;
 }
@@ -223,6 +253,21 @@ body {
 .format-projects {
     font-size: 16px;
     line-height: 1.87;
+}
+
+.section.specialty {
+    padding-bottom: 0;
+}
+.spec-box {
+    display: flex;
+}
+.list.spec-box li {
+    width: 300px;
+    padding-left: 30px;
+}
+.list.spec-box li:first-child {
+    width: 270px;
+    padding-left: 0;
 }
 /* Підвал */
 .footer {
