@@ -10,6 +10,7 @@
 */
 
 :root {
+--margin-gap-set: 30px;
 --logo-accsent: #000000;
 --background-basis: #F5F5F5;
 --primary-background-color: #ffffff;
@@ -20,7 +21,6 @@
 --secondary-ac-color: #ffffff;
 --button-color: #F5F4FA;
 --text-link-footer: hexa{#ffffff99};
-
 }
 
 body {
@@ -36,6 +36,8 @@ body {
 
     width: 1200px;
     padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 h1, h2, h3, p {
     margin: 0;
@@ -84,11 +86,8 @@ h1, h2, h3, p {
     list-style: none;
     letter-spacing: 0.02em;
 }
-.site-nav li {
-    padding-left: 50px;
-}
-.site-nav li:first-child {
-    padding-left: 0;
+.site-nav .item + .item{
+    margin-left: 50px;
 }
 
 .site-nav .link {
@@ -127,12 +126,10 @@ h1, h2, h3, p {
 
     text-decoration: none;
 }
-.site-auth li {
-    padding-left: 50px;
+.site-auth .item + .item{
+    margin-left: 50px;
 }
-.site-auth li:first-child {
-    padding-left: 0;
-}
+
 .site-auth .link:hover, 
 .site-auth .link:focus {
     color: var(--accsent-color);
@@ -218,6 +215,9 @@ h1, h2, h3, p {
     color: var(--titel-text-color);
 }
 .title.specialty{
+    margin-bottom: 50px;
+    text-align: center;
+
     font-size: 36px;
     line-height: 1.17;
 }
@@ -234,8 +234,9 @@ h1, h2, h3, p {
     text-transform: uppercase;
 }
 .title.name {
-    color: var(--titel-text-color);
+    margin-bottom: 10px;
 
+    color: var(--titel-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.9;
@@ -260,14 +261,43 @@ h1, h2, h3, p {
 }
 .spec-box {
     display: flex;
+    margin-left: calc(-1 * var(--margin-gap-set));
 }
-.list.spec-box li {
-    width: 300px;
-    padding-left: 30px;
+ .list.spec-box .item {
+    flex-basis: calc((100% - var(--margin-gap-set)*3) / 4);
+    margin-left: var(--margin-gap-set);
+ }
+
+img {
+    display: block;
+    max-width: 100%;
 }
-.list.spec-box li:first-child {
-    width: 270px;
-    padding-left: 0;
+.img-box {
+    display: flex;
+    margin-left: calc(-1 * var(--margin-gap-set));
+}
+.img-box .item {
+    flex-basis: calc((100% - var(--margin-gap-set)*2) / 3);
+    margin-left: var(--margin-gap-set);
+}
+
+.team-set {
+    display: flex;
+    margin-left: calc(-1 * var(--margin-gap-set));
+}
+.team-set .item {
+    flex-basis: calc((100% - var(--margin-gap-set)*3) / 4);
+    margin-left: var(--margin-gap-set);
+}
+.card-content {
+    padding: var(--margin-gap-set);
+    text-align: center;
+    background-color: var(--primary-background-color);
+    border: 1px 1px 1px;
+    border-radius: 0px 0px 4px 4px;
+}
+.item *{
+    outline: 2px solid tomato;
 }
 /* Підвал */
 .footer {
