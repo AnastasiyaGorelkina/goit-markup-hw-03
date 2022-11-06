@@ -43,12 +43,14 @@ h1, h2, h3, p {
     margin: 0;
 }
 /* Шапка */
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
 .navcont {
     display: flex;
-    min-height: 80px;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 1px solid #ECECEC;
+    
     
 }
 
@@ -91,12 +93,13 @@ h1, h2, h3, p {
 }
 
 .site-nav .link {
-    color: var(--titel-text-color);
+    display: inline-block;
+    padding: 32px 0px;
 
+    color: var(--titel-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.15;
-
     text-decoration: none;
 }
 
@@ -118,12 +121,13 @@ h1, h2, h3, p {
     letter-spacing: 0.02em;
 }
 .site-auth .link {
-    color: var(--primary-text-color);
+    display: inline-block;
+    padding: 32px 0px;
 
+    color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.15;
-
     text-decoration: none;
 }
 .site-auth .item + .item{
@@ -143,13 +147,14 @@ h1, h2, h3, p {
 .hero {
     background-color: var(--secondary-background-color);
     text-align: center;
+    padding: 200px;
 }
-.section-hero{
-   padding: 200px;
-}
-.hero.text{
-    color: var(--secondary-ac-color);
 
+.hero-text{
+    width: 696px;
+    margin: 0 auto;
+
+    color: var(--secondary-ac-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.37;
@@ -334,7 +339,7 @@ img {
 } */
 /* Підвал */
 .footer {
-    padding: 80px 0;
+    padding: 60px 0;
 
     background-color:var(--secondary-background-color) ;
 }
