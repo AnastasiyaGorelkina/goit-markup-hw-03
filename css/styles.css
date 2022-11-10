@@ -147,7 +147,7 @@ h1, h2, h3, p {
 .hero {
     background-color: var(--secondary-background-color);
     text-align: center;
-    padding: 200px;
+    padding: 200px 0px;
 }
 
 .hero-text{
